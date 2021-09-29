@@ -46,4 +46,16 @@ public class CustomerRegisterServiceImpl implements ICustomerRegister {
 		return uDetails;
 	}
 
+	@Override
+	public UserDetails findByName(String uName) {
+		Optional<UserDetails> opt = dao.findById(uName);
+		return opt.get();
+	}
+
+	@Override
+	public UserDetails register1(UserDetails uDetails) {
+		UserDetails details = dao.save(uDetails); 
+		return details;
+	}
+
 }

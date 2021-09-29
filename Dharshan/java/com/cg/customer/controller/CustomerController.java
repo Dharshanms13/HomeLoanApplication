@@ -44,7 +44,7 @@ import com.cg.customer.util.LoanUtil;
 @RequestMapping("/customer")
 @Validated
 public class CustomerController {
-	
+
 	@Autowired
 	private ICustomerRegister cRegister;
 
@@ -62,65 +62,103 @@ public class CustomerController {
 
 	private Logger logger = Logger.getLogger(CustomerController.class);
 
+	// Only User
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping("/add")
-	public CustomerDetails addPersonalDetails(@RequestBody @Valid CreateCustomerRequest requestData, HttpServletRequest request) {
+	public CustomerDetails addPersonalDetails(@RequestBody @Valid CreateCustomerRequest requestData,
+			HttpServletRequest request) {
 		HttpSession session = request.getSession();
-		if(session.getAttribute("username") == null) {
+		if (session.getAttribute("username") == null) {
 			throw new LoginRequiredException("Please login first");
 		}
-		if(!session.getAttribute("role").equals("User")) {
+		if (!session.getAttribute("role").equals("User")) {
 			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
 		}
-		if(session.getAttribute("custid") != null) {
+		if (session.getAttribute("custid") != null) {
 			throw new NotAccessibleException("You have already entered the personal details");
 		}
 		Customer customer = new Customer(requestData.getName(), requestData.getMobileNumber(), requestData.getEmailId(),
 				requestData.getDate(), requestData.getGender(), requestData.getNationality(),
 				requestData.getAadharNumber(), requestData.getPan());
 		customer = customerService.register(customer);
-		//UserDetails details = cRegister.findByName(userDetails);
+		Object uName = session.getAttribute("username");
+		String name = (String) uName;
+		UserDetails udetails = cRegister.findByName(name);
+		System.out.println(udetails);
+		if (udetails == null) {
+			return null;
+		}
+		udetails.setCustid(customer.getId());
+		udetails = cRegister.register1(udetails);
 		CustomerDetails details = customerUtil.toDetails(customer);
 		return details;
 	}
 
+	// Only Admin
 	@GetMapping("/allcustomers")
 	public List<CustomerDetails> findall(HttpServletRequest request) {
 		HttpSession session = request.getSession();
-		if(session.getAttribute("username") == null) {
+		if (session.getAttribute("username") == null) {
 			throw new LoginRequiredException("Please login first");
 		}
-		if(!session.getAttribute("role").equals("Admin")) {
-			throw new NotAccessibleException("You cannot access this");
+		if (!session.getAttribute("role").equals("Admin")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
 		}
 		List<Customer> customers = customerService.findAll();
 		List<CustomerDetails> details = customerUtil.toDetails(customers);
 		return details;
 	}
 
+	// Only Admin
 	@GetMapping("/by/id/{id}")
-	public CustomerDetails findCustomerById(@PathVariable("id") int id) {
+	public CustomerDetails findCustomerById(@PathVariable("id") int id, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (!session.getAttribute("role").equals("Admin")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
 		Customer customer = customerService.findById(id);
 		CustomerDetails details = customerUtil.toDetails(customer);
 		return details;
 	}
 
+	// Only User
 	@GetMapping("/loan/Apply/{date}/{applyamount}/{custid}")
 	public LoanDetails addLoan(@PathVariable("date") Date date, @PathVariable("applyamount") float amount,
-			@PathVariable("custid") int id) {
-		logger.info("Applying loan for customer with id : " + id);
-		Customer customer = customerService.findById(id);
-		Loan loan = new Loan(date, amount, id, "Not Approved");
+			HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (!session.getAttribute("role").equals("User")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
+		if (session.getAttribute("custid") == null) {
+			throw new NotAccessibleException("Update your personal details in addPersonalDetails().......");
+		}
+		Object custid = session.getAttribute("custid");
+		int cid = (int) custid;
+		logger.info("Applying loan for customer with id : " + cid);
+		Loan loan = new Loan(date, amount, cid, "Not Approved");
 		loan = customerLoanService.register(loan);
-		logger.info(
-				"Loan applied with id : " + loan.getApplicationid() + " for customer with id : " + customer.getId());
+		logger.info("Loan applied with id : " + loan.getApplicationid() + " for customer with id : " + cid);
 		LoanDetails details = loanUtil.toDetails(loan);
 		return details;
 	}
 
+	// Only FVO and Admin
 	@GetMapping("/loan/updateFinanceDocuments/{customerid}/{applicationid}/{finance}")
 	public LoanDetails updateLoanFinance(@PathVariable("customerid") int id, @PathVariable("applicationid") int appid,
-			@PathVariable("finance") boolean financeupdate) {
+			@PathVariable("finance") boolean financeupdate, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (session.getAttribute("role").equals("User")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
 		logger.info("Updating Finance Documents for customer with id : " + id + " for application id : " + appid);
 		Customer customer = customerService.findById(id);
 		Loan loan = customerLoanService.findByCustId(id, appid);
@@ -136,9 +174,18 @@ public class CustomerController {
 		return details;
 	}
 
+	// Only LVO and Admin
 	@GetMapping("/loan/updateLandDocuments/{customerid}/{applicationid}/{landdocuments}")
 	public LoanDetails updateLoanLandDocuments(@PathVariable("customerid") int id,
-			@PathVariable("applicationid") int appid, @PathVariable("landdocuments") boolean landdocumentsupdate) {
+			@PathVariable("applicationid") int appid, @PathVariable("landdocuments") boolean landdocumentsupdate,
+			HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (session.getAttribute("role").equals("User")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
 		logger.info("Updating Land Documents for customer with id : " + id + " for application id : " + appid);
 		Customer customer = customerService.findById(id);
 		Loan loan = customerLoanService.findByCustId(id, appid);
@@ -154,10 +201,19 @@ public class CustomerController {
 		return details;
 	}
 
+	// Only Admin
 	@GetMapping("/loan/updateAdminApprove/{customerid}/{applicationid}/{approvedamount}/{adminapprove}/{rejectdata}")
 	public LoanDetails updateAdminApproval(@PathVariable("customerid") int id, @PathVariable("applicationid") int appid,
 			@PathVariable("approvedamount") float approveamount,
-			@PathVariable("adminapprove") boolean adminapprovalupdate, @PathVariable("rejectdata") String reject) {
+			@PathVariable("adminapprove") boolean adminapprovalupdate, @PathVariable("rejectdata") String reject,
+			HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (!session.getAttribute("role").equals("Admin")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
 		logger.info("Admin approval in process for customer with id : " + id + " for application id : " + appid);
 		Customer customer = customerService.findById(id);
 		Loan loan = customerLoanService.findByCustId(id, appid);
@@ -191,11 +247,24 @@ public class CustomerController {
 	}
 
 	// deleting loan
-	@GetMapping("/loan/removeLoanByCustomerId/{id}/{appid}")
-	public LoanDetails deleteLoan(@PathVariable("id") int id, @PathVariable("appid") int appid) {
-		logger.info("Deleting loan for customer id : " + id + " with application id : " + appid);
-		Customer customer = customerService.findById(id);
-		Loan loan = customerLoanService.findByCustId(id, appid);
+	// Only User
+	@GetMapping("/loan/removeLoanByCustomerId/{appid}")
+	public LoanDetails deleteLoan(@PathVariable("appid") int appid, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (!session.getAttribute("role").equals("User")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
+		if (session.getAttribute("custid") == null) {
+			throw new NotAccessibleException("Update your personal details in addPersonalDetails().......");
+		}
+		Object custid = session.getAttribute("custid");
+		int cid = (int) custid;
+		logger.info("Deleting loan for customer id : " + cid + " with application id : " + appid);
+		Customer customer = customerService.findById(cid);
+		Loan loan = customerLoanService.findByCustId(cid, appid);
 		if (loan.getStatus().equals("Approved") || loan.getStatus().equals("Rejected")) {
 			logger.error("Tried to delete approved/rejected loan.......");
 			throw new CustomerApprovedException("Cannot delete approved/rejected loans");
@@ -205,34 +274,70 @@ public class CustomerController {
 		return details;
 	}
 
-	@GetMapping("/loan/getAllLoansAppliedByCustomerId/{id}")
-	public List<LoanDetails> getAllLoansByCustomerId(@PathVariable("id") int id) {
-		logger.info("Retrieving all loans applied by customer id : " + id);
-		Customer customer = customerService.findById(id);
-		List<Loan> loans = customerLoanService.findByCustId(id);
+	// Only User
+	@GetMapping("/loan/getAllLoansAppliedByCustomerId")
+	public List<LoanDetails> getAllLoansByCustomerId(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (!session.getAttribute("role").equals("User")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
+		if (session.getAttribute("custid") == null) {
+			throw new NotAccessibleException("Update your personal details in addPersonalDetails().......");
+		}
+		Object custid = session.getAttribute("custid");
+		int cid = (int) custid;
+		List<Loan> loans = customerLoanService.findByCustId(cid);
 		List<LoanDetails> details = loanUtil.toDetails(loans);
-		logger.info("Displayed all loans applied by customer id : " + id);
+		logger.info("Displayed all loans applied by customer id : " + cid);
 		return details;
 	}
 
-	@GetMapping("/loan/loanTracker/{custid}/{applicationid}")
-	public LoanTracker getLoanDetails(@PathVariable("custid") int id, @PathVariable("applicationid") int appid) {
-		logger.info("Loan Status Tracking for customer id : " + id + " with application id + " + appid);
-		Customer customer = customerService.findById(id);
-		Loan loan = customerLoanService.findByCustId(id, appid);
+	// Only User
+	@GetMapping("/loan/loanTracker/{applicationid}")
+	public LoanTracker getLoanDetails(@PathVariable("applicationid") int appid, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (!session.getAttribute("role").equals("User")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
+		if (session.getAttribute("custid") == null) {
+			throw new NotAccessibleException("Update your personal details in addPersonalDetails().......");
+		}
+		Object custid = session.getAttribute("custid");
+		int cid = (int) custid;
+		logger.info("Loan Status Tracking for customer id : " + cid + " with application id + " + appid);
+		Loan loan = customerLoanService.findByCustId(cid, appid);
 		LoanTracker lt = new LoanTracker();
 
 		lt = customerLoanService.loanTracker(loan);
-		logger.info("Loan Status Displayed for customer id : " + id + " with application id + " + appid);
+		logger.info("Loan Status Displayed for customer id : " + cid + " with application id + " + appid);
 		return lt;
 	}
 
-	@GetMapping("/emi/approvedEMI/{custid}/{applicationid}/{rateOfInterest}/{timePeriod}")
-	public Emi calculateApprovedEmi(@PathVariable("custid") int id, @PathVariable("applicationid") int appid,
-			@PathVariable("rateOfInterest") double rateOfInterest, @PathVariable("timePeriod") int timePeriod) {
-		logger.info("Checking EMI for customer id : " + id + " with application id : " + appid);
-		Customer customer = customerService.findById(id);
-		Loan loan = customerLoanService.findByCustId(id, appid);
+	// Only User
+	@GetMapping("/emi/approvedEMI/{applicationid}/{rateOfInterest}/{timePeriod}")
+	public Emi calculateApprovedEmi(@PathVariable("applicationid") int appid,
+			@PathVariable("rateOfInterest") double rateOfInterest, @PathVariable("timePeriod") int timePeriod,
+			HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		if (session.getAttribute("username") == null) {
+			throw new LoginRequiredException("Please login first");
+		}
+		if (!session.getAttribute("role").equals("User")) {
+			throw new NotAccessibleException("Cannot be accessed by : " + session.getAttribute("role"));
+		}
+		if (session.getAttribute("custid") == null) {
+			throw new NotAccessibleException("Update your personal details in addPersonalDetails().......");
+		}
+		Object custid = session.getAttribute("custid");
+		int cid = (int) custid;
+		logger.info("Checking EMI for customer id : " + cid + " with application id : " + appid);
+		Loan loan = customerLoanService.findByCustId(cid, appid);
 		Emi emi = null;
 		if (loan.getStatus().equals("Approved")) {
 			double loanAmount = loan.getApproveamount();
@@ -245,7 +350,7 @@ public class CustomerController {
 			logger.error("Cannot display EMI for rejected loans.......");
 			throw new LoanNotApproved("Loan is not approved to check EMI");
 		}
-		logger.info("EMI details displayed for customer id : " + id + " with application id : " + appid);
+		logger.info("EMI details displayed for customer id : " + cid + " with application id : " + appid);
 		return emi;
 	}
 
@@ -277,16 +382,7 @@ public class CustomerController {
 	@PostMapping("/logout")
 	public String logout(@RequestBody UserDetailsDto userDetails, HttpServletRequest request) {
 		HttpSession session = request.getSession();
-//		Enumeration<String> attrNames = session.getAttributeNames();
-//		while(attrNames.hasMoreElements()) {
-//			String name = (String) attrNames.nextElement();
-//			String uName = (String) session.getAttribute(name);
-//			if(uName.equals(userDetails.getUsername())) {
-//				session.invalidate();
-//			}
-//			System.out.println(uName);
-//		}
-		if(userDetails.getUsername().equals(session.getAttribute("username"))){
+		if (userDetails.getUsername().equals(session.getAttribute("username"))) {
 			session.invalidate();
 			return "You have successfully logged out " + userDetails.getUsername();
 		}
@@ -298,6 +394,7 @@ public class CustomerController {
 	public String register(@RequestBody UserDetailsDto userDetails, HttpServletRequest request) {
 		UserDetails uDetails = new UserDetails(userDetails.getUsername(), userDetails.getPassword(), "User");
 		uDetails = cRegister.register(uDetails);
-		return "Registration successful with Username : " + uDetails.getUsername() + " Role-> " + uDetails.getUserRole();
+		return "Registration successful with Username : " + uDetails.getUsername() + " Role-> "
+				+ uDetails.getUserRole();
 	}
 }

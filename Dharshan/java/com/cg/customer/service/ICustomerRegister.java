@@ -9,4 +9,9 @@ public interface ICustomerRegister {
 
 	UserDetails findByName(UserDetailsDto userDetails);
 
+	UserDetails findByName(String uName);
+
+	UserDetails register1(UserDetails udetails);
+
+
 }
