@@ -1,0 +1,1544 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Tue Sep 28 23:44:35 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Adding Customer.....</td>
+</tr>
+
+<tr>
+<td>251</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Customer added : Customer [id=26, name=Dharshan, mobileNumber=9012345678, emaild=dharshanms@gmail.com, dob=2021-09-28, gender=male, nationality=Indian, aadharNumber=1234567894560, pan=dfghj123]</td>
+</tr>
+
+<tr>
+<td>25998</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>26065</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+
+<tr>
+<td>43000</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>43009</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>49092</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 23</td>
+</tr>
+
+<tr>
+<td>49093</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 23</td>
+</tr>
+
+<tr>
+<td>57275</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 26</td>
+</tr>
+
+<tr>
+<td>57277</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 26</td>
+</tr>
+
+<tr>
+<td>98721</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Checking EMI for customer id : 23 with application id : 25</td>
+</tr>
+
+<tr>
+<td>98752</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 23</td>
+</tr>
+
+<tr>
+<td>98753</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 23</td>
+</tr>
+
+<tr>
+<td>98814</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">EMI details displayed for customer id : 23 with application id : 25</td>
+</tr>
+
+<tr>
+<td>119684</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Using simple EMI calculator.........</td>
+</tr>
+
+<tr>
+<td>119685</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">EMI details displayed for entered values</td>
+</tr>
+
+<tr>
+<td>133771</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Retrieving all loans applied by customer id : 26</td>
+</tr>
+
+<tr>
+<td>133773</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 26</td>
+</tr>
+
+<tr>
+<td>133774</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 26</td>
+</tr>
+
+<tr>
+<td>133777</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.service.CustomerLoanServiceImpl category">com.cg.Customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">No loans applied by Customer with id : 26</td>
+</tr>
+
+<tr>
+<td>147376</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Retrieving all loans applied by customer id : 22</td>
+</tr>
+
+<tr>
+<td>147377</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>147378</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>147380</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Displayed all loans applied by customer id : 22</td>
+</tr>
+
+<tr>
+<td>170871</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Applying loan for customer with id : 22</td>
+</tr>
+
+<tr>
+<td>170873</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>170875</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>170940</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan applied with id : 27 for customer with id : 22</td>
+</tr>
+
+<tr>
+<td>177226</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Retrieving all loans applied by customer id : 22</td>
+</tr>
+
+<tr>
+<td>177227</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>177228</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>177231</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Displayed all loans applied by customer id : 22</td>
+</tr>
+
+<tr>
+<td>197324</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Checking EMI for customer id : 23 with application id : 27</td>
+</tr>
+
+<tr>
+<td>197325</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 23</td>
+</tr>
+
+<tr>
+<td>197327</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 23</td>
+</tr>
+
+<tr>
+<td>197331</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.service.CustomerLoanServiceImpl category">com.cg.Customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 27 not present for Customer id : 23</td>
+</tr>
+
+<tr>
+<td>204954</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Checking EMI for customer id : 22 with application id : 27</td>
+</tr>
+
+<tr>
+<td>204955</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>204956</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>204961</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Cannot display EMI for rejected loans.......</td>
+</tr>
+
+<tr>
+<td>233403</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Tracking for customer id : 22 with application id + 26</td>
+</tr>
+
+<tr>
+<td>233404</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>233405</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>233408</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.service.CustomerLoanServiceImpl category">com.cg.Customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 26 not present for Customer id : 22</td>
+</tr>
+
+<tr>
+<td>239218</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Tracking for customer id : 22 with application id + 25</td>
+</tr>
+
+<tr>
+<td>239219</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>239221</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>239226</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.service.CustomerLoanServiceImpl category">com.cg.Customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 25 not present for Customer id : 22</td>
+</tr>
+
+<tr>
+<td>247082</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Tracking for customer id : 22 with application id + 24</td>
+</tr>
+
+<tr>
+<td>247083</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>247084</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>247089</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Displayed for customer id : 22 with application id + 24</td>
+</tr>
+
+<tr>
+<td>252885</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Tracking for customer id : 22 with application id + 26</td>
+</tr>
+
+<tr>
+<td>252886</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>252887</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>252893</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.service.CustomerLoanServiceImpl category">com.cg.Customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 26 not present for Customer id : 22</td>
+</tr>
+
+<tr>
+<td>260281</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Tracking for customer id : 22 with application id + 27</td>
+</tr>
+
+<tr>
+<td>260282</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>260283</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>260287</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Displayed for customer id : 22 with application id + 27</td>
+</tr>
+
+<tr>
+<td>282108</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Admin approval in process for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>282109</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>282110</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>282113</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Land and Finance Document Approval required for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>295811</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Updating Finance Documents for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>295812</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>295814</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>296089</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Updated Finance Documents for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>308402</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Updating Land Documents for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>308403</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>308404</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>308412</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Updated Finance Documents for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>332042</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Admin approval in process for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>332043</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>332044</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>332047</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan processing done for customer with id : 22 for application id : 27 ......... Approved</td>
+</tr>
+
+<tr>
+<td>332061</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan processing done for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>338722</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Admin approval in process for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>338723</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>338724</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>338726</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Tried to update agian.......</td>
+</tr>
+
+<tr>
+<td>346811</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Updating Finance Documents for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>346811</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>346812</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>346817</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Tried to update agian.......</td>
+</tr>
+
+<tr>
+<td>355627</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Updating Land Documents for customer with id : 22 for application id : 27</td>
+</tr>
+
+<tr>
+<td>355628</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>355629</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>355634</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Tried to update agian.......</td>
+</tr>
+
+<tr>
+<td>371986</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Tracking for customer id : 22 with application id + 27</td>
+</tr>
+
+<tr>
+<td>371987</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>371988</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.service.CustomerServiceImpl category">com.cg.Customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>371993</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.Customer.controller.CustomerController category">com.cg.Customer.controller.CustomerController</td>
+<td title="Message">Loan Status Displayed for customer id : 22 with application id + 27</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Wed Sep 29 11:17:27 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Checking EMI for customer id : 22 with application id : 27</td>
+</tr>
+
+<tr>
+<td>36</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>166</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>228</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">EMI details displayed for customer id : 22 with application id : 27</td>
+</tr>
+
+<tr>
+<td>14727</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Checking EMI for customer id : 22 with application id : 24</td>
+</tr>
+
+<tr>
+<td>14728</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>14757</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>14762</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Cannot display EMI for rejected loans.......</td>
+</tr>
+
+<tr>
+<td>62847</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Checking EMI for customer id : 22 with application id : 24</td>
+</tr>
+
+<tr>
+<td>62848</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>62850</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>62854</td>
+<td title="http-nio-8583-exec-1 thread">http-nio-8583-exec-1</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Cannot display EMI for rejected loans.......</td>
+</tr>
+
+<tr>
+<td>75575</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Checking EMI for customer id : 22 with application id : 27</td>
+</tr>
+
+<tr>
+<td>75575</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>75577</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>75582</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">EMI details displayed for customer id : 22 with application id : 27</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Wed Sep 29 11:24:46 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 21 with application id : 26</td>
+</tr>
+
+<tr>
+<td>24</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 21</td>
+</tr>
+
+<tr>
+<td>94</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Customer Doesn't exist with id : 21</td>
+</tr>
+
+<tr>
+<td>6022</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 22 with application id : 26</td>
+</tr>
+
+<tr>
+<td>6023</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>6039</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>6074</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.service.CustomerLoanServiceImpl category">com.cg.customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 26 not present for Customer id : 22</td>
+</tr>
+
+<tr>
+<td>10986</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 22 with application id : 27</td>
+</tr>
+
+<tr>
+<td>10987</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>10989</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>10994</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Tried to delete approved/rejected loan.......</td>
+</tr>
+
+<tr>
+<td>18851</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 22 with application id : 25</td>
+</tr>
+
+<tr>
+<td>18853</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>18856</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>18860</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.service.CustomerLoanServiceImpl category">com.cg.customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 25 not present for Customer id : 22</td>
+</tr>
+
+<tr>
+<td>27605</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 22 with application id : 24</td>
+</tr>
+
+<tr>
+<td>27606</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>27608</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>27613</td>
+<td title="http-nio-8583-exec-4 thread">http-nio-8583-exec-4</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Tried to delete approved/rejected loan.......</td>
+</tr>
+
+<tr>
+<td>54102</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Applying loan for customer with id : 22</td>
+</tr>
+
+<tr>
+<td>54103</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>54105</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>54277</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Loan applied with id : 28 for customer with id : 22</td>
+</tr>
+
+<tr>
+<td>67212</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 22 with application id : 28</td>
+</tr>
+
+<tr>
+<td>67213</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>67214</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>81196</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Applying loan for customer with id : 22</td>
+</tr>
+
+<tr>
+<td>81196</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>81198</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>81201</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Loan applied with id : 29 for customer with id : 22</td>
+</tr>
+
+<tr>
+<td>94582</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 22 with application id : 28</td>
+</tr>
+
+<tr>
+<td>94584</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>94586</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+
+<tr>
+<td>94594</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.service.CustomerLoanServiceImpl category">com.cg.customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 28 not present for Customer id : 22</td>
+</tr>
+
+<tr>
+<td>100874</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 23 with application id : 28</td>
+</tr>
+
+<tr>
+<td>100875</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 23</td>
+</tr>
+
+<tr>
+<td>100876</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 23</td>
+</tr>
+
+<tr>
+<td>100879</td>
+<td title="http-nio-8583-exec-8 thread">http-nio-8583-exec-8</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.service.CustomerLoanServiceImpl category">com.cg.customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 28 not present for Customer id : 23</td>
+</tr>
+
+<tr>
+<td>107474</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 23 with application id : 29</td>
+</tr>
+
+<tr>
+<td>107475</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 23</td>
+</tr>
+
+<tr>
+<td>107477</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 23</td>
+</tr>
+
+<tr>
+<td>107480</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="com.cg.customer.service.CustomerLoanServiceImpl category">com.cg.customer.service.CustomerLoanServiceImpl</td>
+<td title="Message">Application with id : 29 not present for Customer id : 23</td>
+</tr>
+
+<tr>
+<td>122453</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.controller.CustomerController category">com.cg.customer.controller.CustomerController</td>
+<td title="Message">Deleting loan for customer id : 22 with application id : 29</td>
+</tr>
+
+<tr>
+<td>122454</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Finding customer by id : 22</td>
+</tr>
+
+<tr>
+<td>122455</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Found customer by id : 22</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Wed Sep 29 14:19:29 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>280</td>
+<td title="http-nio-8583-exec-2 thread">http-nio-8583-exec-2</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+
+<tr>
+<td>104293</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>104296</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+
+<tr>
+<td>166689</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>166690</td>
+<td title="http-nio-8583-exec-6 thread">http-nio-8583-exec-6</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Wed Sep 29 14:25:44 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>39</td>
+<td title="http-nio-8583-exec-3 thread">http-nio-8583-exec-3</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Wed Sep 29 14:31:35 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>37</td>
+<td title="http-nio-8583-exec-9 thread">http-nio-8583-exec-9</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+
+<tr>
+<td>25447</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>25450</td>
+<td title="http-nio-8583-exec-10 thread">http-nio-8583-exec-10</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Wed Sep 29 14:39:16 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>57</td>
+<td title="http-nio-8583-exec-7 thread">http-nio-8583-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Log4J Log Messages</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Wed Sep 29 14:53:28 IST 2021<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">Display all customers.......</td>
+</tr>
+
+<tr>
+<td>35</td>
+<td title="http-nio-8583-exec-5 thread">http-nio-8583-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.cg.customer.service.CustomerServiceImpl category">com.cg.customer.service.CustomerServiceImpl</td>
+<td title="Message">All customers displayed</td>
+</tr>
